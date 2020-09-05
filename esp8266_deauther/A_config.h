@@ -11,7 +11,7 @@
 /* ===>> !!! Uncomment the board that you're using: !!! <<=== */
 /* ---------------------------------------------------------- */
 
-#define NODEMCU
+//#define NODEMCU
 // #define WEMOS_D1_MINI
 // #define DSTIKE_DEAUTHER
 // #define DSTIKE_DEAUTHER_V1
@@ -41,7 +41,7 @@
 // #define DSTIKE_USB_DEAUTHER_V2
 // #define DSTIKE_DEAUTHER_WRISTBAND
 // #define DSTIKE_DEAUTHER_WATCH
-// #define DSTIKE_DEAUTHER_WATCH_V2
+#define DSTIKE_DEAUTHER_WATCH_V2
 // #define DSTIKE_DEAUTHER_MINI
 // #define DSTIKE_DEAUTHER_MINI_EVO
 // #define LYASI_7W_E27_LAMP
