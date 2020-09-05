@@ -11,7 +11,7 @@
 /* ===>> !!! Uncomment the board that you're using: !!! <<=== */
 /* ---------------------------------------------------------- */
 
-// #define NODEMCU
+#define NODEMCU
 // #define WEMOS_D1_MINI
 // #define DSTIKE_DEAUTHER
 // #define DSTIKE_DEAUTHER_V1
@@ -277,9 +277,12 @@
 
 #elif defined(DEFAULT_ESP8266) || defined(NODEMCU) || defined(WEMOS_D1_MINI) || defined(DSTIKE_USB_DEAUTHER) || defined(DSTIKE_NODEMCU_07) || defined(DSTIKE_DEAUTHER) || defined(DSTIKE_DEAUTHER_V1) || defined(DSTIKE_DEAUTHER_V2) || defined(DSTIKE_DEAUTHER_V3)
 // ===== LED ===== //
-   #define LED_DIGITAL
-   #define LED_PIN_R 16 // NodeMCU on-board LED
-   #define LED_PIN_B 2  // ESP-12 LED
+   #define LED_NEOPIXEL_GRB
+   #define LED_NEOPIXEL_NUM 1
+   #define LED_NEOPIXEL_PIN 15
+   //#define LED_DIGITAL
+   //#define LED_PIN_R 16 // NodeMCU on-board LED
+   //#define LED_PIN_B 2  // ESP-12 LED
 
 #endif /* if defined(DEFAULT_ESP8266) || defined(NODEMCU) || defined(WEMOS_D1_MINI) || defined(DSTIKE_USB_DEAUTHER) || defined(DSTIKE_NODEMCU_07) || defined(DSTIKE_DEAUTHER) || defined(DSTIKE_DEAUTHER_V1) || defined(DSTIKE_DEAUTHER_V2) || defined(DSTIKE_DEAUTHER_V3) */
 // ============================== //
@@ -290,11 +293,11 @@
 // ===== AUTOSAVE ===== //
 #ifndef AUTOSAVE_ENABLED
   #define AUTOSAVE_ENABLED true
-#endif /* ifndef ATTACK_ALL_CH */
+#endif /* ifndef AUTOSAVE_ENABLED */
 
 #ifndef AUTOSAVE_TIME
   #define AUTOSAVE_TIME 60
-#endif /* ifndef ATTACK_ALL_CH */
+#endif /* ifndef AUTOSAVE_TIME */
 
 // ===== ATTACK ===== //
 #ifndef ATTACK_ALL_CH
@@ -306,7 +309,7 @@
 #endif /* ifndef RANDOM_TX */
 
 #ifndef ATTACK_TIMEOUT
-  #define ATTACK_TIMEOUT 600
+  #define ATTACK_TIMEOUT 0
 #endif /* ifndef ATTACK_TIMEOUT */
 
 #ifndef DEAUTHS_PER_TARGET
@@ -440,12 +443,12 @@
 #endif /* ifndef DISPLAY_TEXT */
 
 #ifndef FLIP_DIPLAY
-  #define FLIP_DIPLAY false
+  #define FLIP_DIPLAY true
 #endif /* ifndef FLIP_DIPLAY */
 
 #if !defined(SSD1306_I2C) && !defined(SSD1306_SPI) && !defined(SH1106_I2C) && !defined(SH1106_SPI)
   #define SSD1306_I2C
-  #define USE_DISPLAY false
+  #define USE_DISPLAY true
 #else /* if !defined(SSD1306_I2C) && !defined(SSD1306_SPI) && !defined(SH1106_I2C) && !defined(SH1106_SPI) */
   #define USE_DISPLAY true
 #endif /* if !defined(SSD1306_I2C) && !defined(SSD1306_SPI) && !defined(SH1106_I2C) && !defined(SH1106_SPI) */
@@ -476,19 +479,19 @@
 
 // =============== BUTTONS =============== //
 #ifndef BUTTON_UP
-  #define BUTTON_UP 255
+  #define BUTTON_UP 14
 #endif // ifndef BUTTON_UP
 
 #ifndef BUTTON_DOWN
-  #define BUTTON_DOWN 255
+  #define BUTTON_DOWN 12
 #endif // ifndef BUTTON_DOWN
 
 #ifndef BUTTON_A
-  #define BUTTON_A 255
+  #define BUTTON_A 13
 #endif // ifndef BUTTON_A
 
 #ifndef BUTTON_B
-  #define BUTTON_B 255
+  #define BUTTON_B 10
 #endif // ifndef BUTTON_B
 
 // ======== CONSTANTS ========== //
@@ -549,10 +552,10 @@
  #define LED_PIN_B 2
 
  #define LED_NEOPIXEL_RGB
- #define LED_NEOPIXEL_GRB
+ define LED_NEOPIXEL_GRB
 
  #define LED_NEOPIXEL_NUM 1
- #define LED_NEOPIXEL_PIN 255
+ #define LED_NEOPIXEL_PIN 15
 
  #define LED_MODE_OFF 0,0,0
  #define LED_MODE_SCAN 0,0,255
@@ -571,9 +574,9 @@
  #define LED_MY92_MODEL MY92XX_MODEL_MY9231
 
    // ===== DISPLAY ===== //
- #define USE_DISPLAY false
+ #define USE_DISPLAY true
  #define DISPLAY_TIMEOUT 600
- #define FLIP_DIPLAY false
+ #define FLIP_DIPLAY true
 
  #define SSD1306_I2C
  #define SSD1306_SPI
