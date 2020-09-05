@@ -11,7 +11,7 @@
 /* ===>> !!! Uncomment the board that you're using: !!! <<=== */
 /* ---------------------------------------------------------- */
 
-//#define NODEMCU
+// #define NODEMCU
 // #define WEMOS_D1_MINI
 // #define DSTIKE_DEAUTHER
 // #define DSTIKE_DEAUTHER_V1
@@ -22,7 +22,7 @@
 // #define DSTIKE_DEAUTHER_BOY
 // #define DSTIKE_NODEMCU_07
 // #define DSTIKE_NODEMCU_07_V2
-// #define DSTIKE_DEAUTHER_OLED
+#define DSTIKE_DEAUTHER_OLED
 // #define DSTIKE_DEAUTHER_OLED_V1_5_S
 // #define DSTIKE_DEAUTHER_OLED_V1_5
 // #define DSTIKE_DEAUTHER_OLED_V2
@@ -41,7 +41,7 @@
 // #define DSTIKE_USB_DEAUTHER_V2
 // #define DSTIKE_DEAUTHER_WRISTBAND
 // #define DSTIKE_DEAUTHER_WATCH
-#define DSTIKE_DEAUTHER_WATCH_V2
+// #define DSTIKE_DEAUTHER_WATCH_V2
 // #define DSTIKE_DEAUTHER_MINI
 // #define DSTIKE_DEAUTHER_MINI_EVO
 // #define LYASI_7W_E27_LAMP
@@ -277,12 +277,9 @@
 
 #elif defined(DEFAULT_ESP8266) || defined(NODEMCU) || defined(WEMOS_D1_MINI) || defined(DSTIKE_USB_DEAUTHER) || defined(DSTIKE_NODEMCU_07) || defined(DSTIKE_DEAUTHER) || defined(DSTIKE_DEAUTHER_V1) || defined(DSTIKE_DEAUTHER_V2) || defined(DSTIKE_DEAUTHER_V3)
 // ===== LED ===== //
-   #define LED_NEOPIXEL_GRB
-   #define LED_NEOPIXEL_NUM 1
-   #define LED_NEOPIXEL_PIN 15
-   //#define LED_DIGITAL
-   //#define LED_PIN_R 16 // NodeMCU on-board LED
-   //#define LED_PIN_B 2  // ESP-12 LED
+   #define LED_DIGITAL
+   #define LED_PIN_R 16 // NodeMCU on-board LED
+   #define LED_PIN_B 2  // ESP-12 LED
 
 #endif /* if defined(DEFAULT_ESP8266) || defined(NODEMCU) || defined(WEMOS_D1_MINI) || defined(DSTIKE_USB_DEAUTHER) || defined(DSTIKE_NODEMCU_07) || defined(DSTIKE_DEAUTHER) || defined(DSTIKE_DEAUTHER_V1) || defined(DSTIKE_DEAUTHER_V2) || defined(DSTIKE_DEAUTHER_V3) */
 // ============================== //
